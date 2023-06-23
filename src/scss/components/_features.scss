@@ -1,0 +1,153 @@
+.features {
+  &__content {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+
+      &--reverse {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__item {
+    width: 50%;
+    height: 600px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    padding: 150px 150px 150px 100px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    @include bg-cover;
+
+    &--egg {
+      background-image: url('../img/egg.jpg');
+    }
+
+    &--glass {
+      background-image: url('../img/glass.jpg');
+    }
+
+    &--cherry {
+      background-image: url('../img/cherry.jpg');
+    }
+
+    &--orange {
+      background-image: url('../img/orange.jpg');
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: -0.286px;
+    color: $dark-color;
+
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: 32px;
+    font-family: $second-family;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.129px;
+    color: $gray-color;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    margin-top: 40px;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $dark-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 15px;
+      z-index: -1;
+      display: block;
+      border-radius: 28px;
+      width: 137px;
+      height: 10px;
+      opacity: 0.25;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &--yellow {
+      &::after {
+        background-color: $yellow-color;
+      }
+    }
+
+    &--red {
+      &::after {
+        background-color: $red-color;
+      }
+    }
+
+    @include hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+
+    &-title {
+      margin: 0;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: -0.2px;
+      text-align: center;
+    }
+
+    &-descr {
+      margin: 0;
+      margin-top: 27px;
+      max-width: 339px;
+      font-family: $second-family;
+      line-height: 27px;
+      letter-spacing: -0.114px;
+      text-align: center;
+    }
+
+    &--green {
+      color: $dark-green-color;
+    }
+
+    &--blue {
+      color: $blue-color;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  &__item {
+    @include bg-cover;
+
+    min-height: 532px;
+
+    &--bottles {
+      background-image: url('../img/bottles.jpg');
+    }
+
+    &--plate {
+      background-image: url('../img/plate.jpg');
+    }
+
+    &--cone {
+      background-image: url('../img/cone.jpg');
+    }
+
+    &--sugar {
+      background-image: url('../img/sugar.jpg');
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      min-height: 256px;
+    }
+  }
+}

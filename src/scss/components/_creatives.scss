@@ -1,0 +1,53 @@
+.creatives {
+  @include bg-cover;
+
+  height: 100vh;
+  background-image: url("../img/creatives.jpg");
+
+  &__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 135px;
+    row-gap: 100px;
+
+    @include tablet {
+      row-gap: 52px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 56px;
+    letter-spacing: 8.75px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include small-tablet {
+      font-size: 40px;
+      letter-spacing: 6.25px;
+    }
+  }
+
+  &__link {
+    animation: updown 2s infinite;
+  }
+
+  @include mobile {
+    background-image: url("../img/creatives-mobile.jpg");
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

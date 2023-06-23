@@ -1,0 +1,24 @@
+// fonts
+$main-family: 'Fraunces', sans-serif;
+$second-family: 'Barlow', sans-serif;
+
+// vars
+$content-width: 1110px;
+$container-offset: 30px;
+$container-width: calc(#{$content-width} + (#{$container-offset} * 2));
+
+// colors
+$light-color: #fff;
+$dark-color: #24303e;
+$gray-color: #808397;
+$light-gray-color: #a7aaad;
+$dark-gray-color: #5b636d;
+$blue-color: #19536c;
+$yellow-color: #fad400;
+$dark-yellow-color: #fbd600;
+$red-color: #fe7766;
+$dark-green-color: #24554a;
+$green-color: #458d7e;
+$social-color: #2c7566;
+$light-green-color: #90d4c6;
+$light-opacity-color: rgba(255 255 255 / 25%);
